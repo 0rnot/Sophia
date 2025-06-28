@@ -1,0 +1,53 @@
+{
+  "name": "情報商材の末路",
+  "hp": 280,
+  "atk": 350,
+  "def": 50,
+  "image_url": null,
+  "gold_drop": 3200,
+  "dialogues": {
+    "encounter": "「これで俺も勝ち組だ…」高額なUSBメモリを握りしめ、震える男がいる。",
+    "player_attack": "まだ…まだ俺は変われるはずなんだ…！",
+    "player_win": "彼は「初期費用だから…」と呟き、消費者金融のチラシを見つめていた。",
+    "player_lose": "あなたも彼の甘い言葉に乗り、借金を背負ってしまった。",
+    "player_flee": "情報弱者は黙っててくれないか。"
+  },
+  "actions": [
+    {
+      "name": "成功者の引用",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は誰かの受け売りの言葉で、空虚な自己啓発を押し付けてくる。 (ATK×0.7)"
+    },
+    {
+      "name": "借金による虚勢",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}はブランド品を見せびらかすが、その顔は暗い。 (ATK×0.8)"
+    },
+    {
+      "name": "根拠のない自信",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「まだ本気出してないだけ」と、自分の現状から目を逸らす。 (ATK×0.9)"
+    },
+    {
+      "name": "友人への勧誘",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}はあなたを仲間に引き込もうと、必死に説得してくる。 (ATK×1.0)"
+    },
+    {
+      "name": "メンターへの祈り",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は会ったこともない教祖の言葉を盲信し、攻撃してくる。 (ATK×1.2)"
+    },
+    {
+      "name": "無料セミナー視聴",
+      "type": "heal",
+      "amount": 40,
+      "message": "{enemy_name}は新しいカモになるための動画を見て、一時的に希望を取り戻した。 (HP40回復)"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "マンスプレイナー",
+  "hp": 750,
+  "atk": 650,
+  "def": 150,
+  "image_url": null,
+  "gold_drop": 9000,
+  "dialogues": {
+    "encounter": "君は知らないだろうから教えてあげるけど、と親切なフリをした男が現れた！",
+    "player_attack": "そんなことも知らないのかい？",
+    "player_win": "説明の途中で矛盾を指摘され、黙り込んでしまった。",
+    "player_lose": "自分が専門家である分野について、延々と説教された。",
+    "player_flee": "まあ、君にはまだ早かったかな。"
+  },
+  "actions": [
+    {
+      "name": "頼んでない解説",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は知っていることを前提に、見下した態度で説明を始める！ (ATK×0.9)"
+    },
+    {
+      "name": "話を遮る",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は相手の話を聞かず、自分の知識を披露し始める！ (ATK×1.0)"
+    },
+    {
+      "name": "単純化しすぎた例え",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は「要するにこういうことだよ」と本質を無視した説明をする！ (ATK×1.1)"
+    },
+    {
+      "name": "感情的なラベリング",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}は反論されると「感情的になるなよ」と論点をずらす！ (ATK×1.3)"
+    },
+    {
+      "name": "『わかった？』",
+      "type": "attack",
+      "damage_multiplier": 1.5,
+      "message": "{enemy_name}は理解度を確認するフリをして、相手を試してくる！ (ATK×1.5)"
+    },
+    {
+      "name": "歴史の引用",
+      "type": "attack",
+      "damage_multiplier": 1.7,
+      "message": "{enemy_name}は脈絡なく過去の偉人の言葉を引用し、権威を振りかざす！ (ATK×1.7)"
+    }
+  ]
+}

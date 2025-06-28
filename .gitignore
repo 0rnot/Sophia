@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database files
+*.db
+*.sqlite3
+sticky_messages_sophia.db
+
+# Log files
+*.log
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+venv/
+env/

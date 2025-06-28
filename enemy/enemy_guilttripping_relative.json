@@ -1,0 +1,53 @@
+{
+  "name": "恩着せがましい親戚",
+  "hp": 800,
+  "atk": 600,
+  "def": 180,
+  "image_url": null,
+  "gold_drop": 8000,
+  "dialogues": {
+    "encounter": "あら、久しぶり。小さい頃はあんなに可愛かったのにねぇ。",
+    "player_attack": "誰のおかげでここまで大きくなれたと思ってるの？",
+    "player_win": "次の法事で会うのが楽しみだわ、と呪いの言葉を残して去った。",
+    "player_lose": "一生分の恩を背負わされ、心が重くなった。",
+    "player_flee": "薄情な子ね。がっかりだわ。"
+  },
+  "actions": [
+    {
+      "name": "過去の恩の催促",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は「あの時いくら使ったと思ってるの」と過去の投資を盾に攻撃してくる！ (ATK×0.8)"
+    },
+    {
+      "name": "善意の押し売り",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は頼んでもいないお節介を焼き、断れない状況を作る！ (ATK×1.0)"
+    },
+    {
+      "name": "心配するフリ",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}はあなたの将来を過剰に心配し、選択の自由を奪う！ (ATK×1.2)"
+    },
+    {
+      "name": "他人との比較",
+      "type": "attack",
+      "damage_multiplier": 1.5,
+      "message": "{enemy_name}は「よその子と違ってあなたは…」と、あなたの価値を貶める！ (ATK×1.5)"
+    },
+    {
+      "name": "期待という名の呪い",
+      "type": "attack",
+      "damage_multiplier": 1.7,
+      "message": "{enemy_name}は「あなたなら出来るわよね？」と過剰な期待をかけ、プレッシャーで押し潰す！ (ATK×1.7)"
+    },
+    {
+      "name": "愛情の確認",
+      "type": "attack",
+      "damage_multiplier": 2.0,
+      "message": "{enemy_name}は「私のことが大事じゃないのね」と究極の選択を迫ってくる！ (ATK×2.0)"
+    }
+  ]
+}

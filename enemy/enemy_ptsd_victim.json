@@ -1,0 +1,53 @@
+{
+  "name": "犯罪被害者の亡霊",
+  "hp": 580,
+  "atk": 450,
+  "def": 180,
+  "image_url": null,
+  "gold_drop": 6000,
+  "dialogues": {
+    "encounter": "「誰かいるの…？やめて、来ないで…！」暗がりで、何かに怯える影が震えている。",
+    "player_attack": "「いやぁぁぁ！助けて！」彼女の目には、あなたが加害者の姿に映っている。",
+    "player_win": "「…終わった…？」彼女は呆然とあなたを見つめ、ゆっくりと光の中に溶けていった。あの日の悪夢から、ようやく解放されたのだ。",
+    "player_lose": "あなたもまた、彼女の終わらない悪夢に取り込まれてしまった。",
+    "player_flee": "「逃げても無駄よ！アイツは、どこまでも追ってくるんだから！」"
+  },
+  "actions": [
+    {
+      "name": "フラッシュバック",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は突然叫び声をあげ、見えない敵と戦い始める！ (ATK×0.9)"
+    },
+    {
+      "name": "人間不信",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}はあなたの優しさを全て拒絶し、その棘があなたを傷つける。 (ATK×1.0)"
+    },
+    {
+      "name": "自傷行為",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は「自分が汚れているからだ」と自分を傷つけ、その血があなたを汚す。 (ATK×1.1)"
+    },
+    {
+      "name": "犯人の幻影",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}はあなたの背後に憎き犯人の姿を見て、錯乱状態に陥る！ (ATK×1.2)"
+    },
+    {
+      "name": "助けを求める声",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}の悲痛な叫びは、誰にも届かなかったあの日の絶望そのものだ。 (ATK×1.3)"
+    },
+    {
+      "name": "カウンセリングの記憶",
+      "type": "heal",
+      "amount": 140,
+      "message": "{enemy_name}は「あなたは悪くない」と言ってくれたカウンセラーの言葉を思い出し、僅かに冷静さを取り戻した。 (HP140回復)"
+    }
+  ]
+}

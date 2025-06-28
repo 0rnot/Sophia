@@ -1,0 +1,53 @@
+{
+  "name": "置き配の荷物",
+  "hp": 220,
+  "atk": 250,
+  "def": 40,
+  "image_url": null,
+  "gold_drop": 2000,
+  "dialogues": {
+    "encounter": "ドアの前に、ポツンと荷物が置かれている。誰にも気づかれず、雨に濡れている。",
+    "player_attack": "……。",
+    "player_win": "あなたは荷物を正しい部屋の前に置いてあげた。それだけだ。",
+    "player_lose": "荷物はカラスにつつかれ、中身が散乱してしまった。",
+    "player_flee": "（ここに置いておけば、誰かが気づくだろう…）"
+  },
+  "actions": [
+    {
+      "name": "雨に濡れる",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}は冷たい雨に打たれ、その悲しみがあなたに伝わる。 (ATK×0.6)"
+    },
+    {
+      "name": "通行人の無関心",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は誰にも見向きもされず、その孤独があなたを蝕む。 (ATK×0.7)"
+    },
+    {
+      "name": "時間の経過",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は忘れ去られる恐怖に震え、存在が希薄になっていく。 (ATK×0.8)"
+    },
+    {
+      "name": "不在票の虚しさ",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は持ち主とのすれ違いに絶望し、その気持ちがあなたを打つ。 (ATK×0.9)"
+    },
+    {
+      "name": "宛名のない攻撃",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}の存在そのものが、都会の無関心さを象徴している。 (ATK×1.0)"
+    },
+    {
+      "name": "配達完了通知",
+      "type": "heal",
+      "amount": 30,
+      "message": "{enemy_name}はシステム上では届けられたことになっており、その事実だけが彼を支えている。 (HP30回復)"
+    }
+  ]
+}

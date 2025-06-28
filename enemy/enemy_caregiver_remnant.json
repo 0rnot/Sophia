@@ -1,0 +1,53 @@
+{
+  "name": "老老介護の残滓",
+  "hp": 550,
+  "atk": 280,
+  "def": 130,
+  "image_url": null,
+  "gold_drop": 3200,
+  "dialogues": {
+    "encounter": "今日も、終わらない。終わりの見えない介護に、魂を削られた者がいる。",
+    "player_attack": "楽に…なりたい…。",
+    "player_win": "彼は愛する人の写真を見つめ、静かに涙を流した。",
+    "player_lose": "あなたもまた、終わりのない介護の連鎖に囚われてしまった。",
+    "player_flee": "ああ…もう時間か…。"
+  },
+  "actions": [
+    {
+      "name": "睡眠不足の目眩",
+      "type": "attack",
+      "damage_multiplier": 0.5,
+      "message": "{enemy_name}はよろめき、その動きは攻撃というより助けを求めているようだ。 (ATK×0.5)"
+    },
+    {
+      "name": "消えかけた優しさ",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}は一瞬だけ優しい顔を見せるが、すぐに憎しみに歪む。その感情の波があなたを襲う。 (ATK×0.6)"
+    },
+    {
+      "name": "社会からの孤立",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は誰にも助けを求められず、その孤独が刃となってあなたに向かう。 (ATK×0.7)"
+    },
+    {
+      "name": "思い出による攻撃",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は「昔は元気だったのに」と幸せだった頃を思い出し、その喪失感があなたを傷つける。 (ATK×0.8)"
+    },
+    {
+      "name": "共倒れの恐怖",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「一人にはしない」と呟き、あなたを道連れにしようとする。 (ATK×0.9)"
+    },
+    {
+      "name": "愛情という名の鎖",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}の攻撃には、憎しみと愛情が入り混じっている。その重さは計り知れない。 (ATK×1.0)"
+    }
+  ]
+}

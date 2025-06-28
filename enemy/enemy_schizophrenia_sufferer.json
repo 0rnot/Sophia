@@ -1,0 +1,53 @@
+{
+  "name": "幻聴に脅える男",
+  "hp": 630,
+  "atk": 420,
+  "def": 210,
+  "image_url": null,
+  "gold_drop": 5800,
+  "dialogues": {
+    "encounter": "「うるさい…黙れ…！俺を悪く言うな！」誰もいない空間に向かって、男が叫んでいる。",
+    "player_attack": "「お前も…！お前も、俺を笑いに来たんだろ！」彼の目には、あなたが嘲笑う悪魔に見えている。",
+    "player_win": "「やっと…静かになった…」男は安堵の表情を浮かべ、糸が切れたようにその場に崩れ落ちた。",
+    "player_lose": "彼の幻聴が、あなたの脳にも直接響き始め、現実との境界が曖昧になっていく。",
+    "player_flee": "「待て！そいつも仲間だ！殺せ、殺せと声が言うんだ！」"
+  },
+  "actions": [
+    {
+      "name": "見えない敵への反撃",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は虚空を殴りつけ、その風圧があなたを襲う。 (ATK×0.8)"
+    },
+    {
+      "name": "思考盗聴への恐怖",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「俺の心を覗くな！」と叫び、あなたの精神に直接ダメージを与える。 (ATK×0.9)"
+    },
+    {
+      "name": "命令する声",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は頭に響く声に操られ、意志とは無関係にあなたを攻撃する。 (ATK×1.0)"
+    },
+    {
+      "name": "自己防衛",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}はあなたを自分を害する存在だと信じ込み、必死に抵抗する。 (ATK×1.1)"
+    },
+    {
+      "name": "世界の歪み",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}が認識する歪んだ世界が、あなたを飲み込もうとする。 (ATK×1.2)"
+    },
+    {
+      "name": "薬の効果",
+      "type": "heal",
+      "amount": 160,
+      "message": "{enemy_name}はポケットの薬を飲み、一瞬だけ幻聴が止んだ。 (HP160回復)"
+    }
+  ]
+}

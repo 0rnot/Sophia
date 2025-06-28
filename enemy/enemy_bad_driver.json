@@ -1,0 +1,53 @@
+{
+  "name": "運転が荒いドライバー",
+  "hp": 500,
+  "atk": 880,
+  "def": 110,
+  "image_url": null,
+  "gold_drop": 11500,
+  "dialogues": {
+    "encounter": "どけよオラァ！クラクションの音と共に猛スピードで車が迫ってきた！",
+    "player_attack": "免許持ってんのか！？",
+    "player_win": "パトカーのサイレンを聞き、慌てて逃げていった。",
+    "player_lose": "理不尽な交通トラブルに巻き込まれ、警察署で一日を過ごした。",
+    "player_flee": "ヘタクソが、消えろ。"
+  },
+  "actions": [
+    {
+      "name": "車間距離詰め",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は背後にピッタリとつき、プレッシャーをかけてくる！ (ATK×1.0)"
+    },
+    {
+      "name": "強引な割り込み",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}はウィンカーも出さずに目の前にねじ込んでくる！ (ATK×1.2)"
+    },
+    {
+      "name": "幅寄せ",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}はギリギリを攻め、物理的な恐怖を与える！ (ATK×1.4)"
+    },
+    {
+      "name": "執拗なパッシング",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}は光の点滅で視界を奪い、冷静さを失わせる！ (ATK×1.6)"
+    },
+    {
+      "name": "クラクション連打",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}は騒音で周囲を威嚇し、聴覚にダメージを与える！ (ATK×1.8)"
+    },
+    {
+      "name": "降車からの威嚇",
+      "type": "attack",
+      "damage_multiplier": 2.5,
+      "message": "{enemy_name}は車から降り、直接的な暴力を振るってくる！ (ATK×2.5)"
+    }
+  ]
+}

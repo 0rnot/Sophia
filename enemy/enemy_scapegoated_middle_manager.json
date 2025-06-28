@@ -1,0 +1,53 @@
+{
+  "name": "スケープゴート管理職",
+  "hp": 500,
+  "atk": 350,
+  "def": 120,
+  "image_url": null,
+  "gold_drop": 5000,
+  "dialogues": {
+    "encounter": "上からは詰められ、下からは突き上げられる。板挟みの男が胃を押さえている。",
+    "player_attack": "すまん…俺の責任だ…。",
+    "player_win": "彼は頭を下げ続け、やがて動かなくなった。ただの置物のようだ。",
+    "player_lose": "彼のストレスと責任を全て肩代わりさせられてしまった。",
+    "player_flee": "ああ、俺がいなければ、みんな丸く収まるんだ…。"
+  },
+  "actions": [
+    {
+      "name": "形式的な謝罪",
+      "type": "attack",
+      "damage_multiplier": 0.5,
+      "message": "{enemy_name}は心なく頭を下げ、その空虚さがあなたの士気を下げる。 (ATK×0.5)"
+    },
+    {
+      "name": "責任の丸抱え",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}は部下のミスを全て被り、その重圧で自滅しかけている。 (ATK×0.6)"
+    },
+    {
+      "name": "意味のない会議",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は何も決まらない会議を主催し、あなたの貴重な時間を奪う。 (ATK×0.7)"
+    },
+    {
+      "name": "胃薬の過剰摂取",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は薬で痛みを誤魔化し、狂気じみた笑顔で攻撃してくる。 (ATK×0.8)"
+    },
+    {
+      "name": "休日出勤の強要",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「俺も出るから…」と悲痛な顔で言い、断れない状況を作る。 (ATK×0.9)"
+    },
+    {
+      "name": "『なんとかします』",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は実現不可能な約束をし、その絶望的な響きがあなたを打ちのめす。 (ATK×1.0)"
+    }
+  ]
+}

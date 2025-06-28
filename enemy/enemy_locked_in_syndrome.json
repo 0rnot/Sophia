@@ -1,0 +1,53 @@
+{
+  "name": "監禁症候群の患者",
+  "hp": 700,
+  "atk": 300,
+  "def": 300,
+  "image_url": null,
+  "gold_drop": 4500,
+  "dialogues": {
+    "encounter": "ベッドに横たわる男。体は動かず、声も出ない。ただ、その目だけが必死に何かを訴えている。",
+    "player_attack": "男の目が、悲しそうに潤んだ。違う、そうじゃない、と叫んでいるようだ。",
+    "player_win": "男の目から、一筋の涙がこぼれ落ちた。それは感謝か、諦めか。やがて、その瞳から光が消えた。",
+    "player_lose": "彼の意識が、あなたの体を乗っ取った。彼は自由を、あなたは永遠の牢獄を手に入れた。",
+    "player_flee": "男の目が、絶望に染まっていく。見捨てられることの恐怖を、あなたは痛いほど感じた。"
+  },
+  "actions": [
+    {
+      "name": "必死の瞬き",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は瞬きでモールス信号を送る。「コ・ロ・シ・テ」と。 (ATK×0.7)"
+    },
+    {
+      "name": "脳内の絶叫",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}の意識が流れ込んでくる。その思考は、助けを求める悲鳴で満ちている。 (ATK×0.8)"
+    },
+    {
+      "name": "自由だった日の記憶",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は草原を駆け回る夢を見ている。その幸福な記憶との落差が、あなたを苦しめる。 (ATK×0.9)"
+    },
+    {
+      "name": "動かない体",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}の体を動かせないもどかしさが、精神的なプレッシャーとなってあなたを襲う。 (ATK×1.0)"
+    },
+    {
+      "name": "意思の奔流",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}の「生きたい」と「死にたい」という矛盾した願いが、あなたの精神を破壊する。 (ATK×1.1)"
+    },
+    {
+      "name": "家族の声",
+      "type": "heal",
+      "amount": 180,
+      "message": "{enemy_name}は見舞いに来た家族の声を聴いている。まだ、自分は独りではない。 (HP180回復)"
+    }
+  ]
+}

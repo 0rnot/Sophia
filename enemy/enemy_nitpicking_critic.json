@@ -1,0 +1,53 @@
+{
+  "name": "揚げ足取りの評論家",
+  "hp": 500,
+  "atk": 850,
+  "def": 80,
+  "image_url": null,
+  "gold_drop": 11000,
+  "dialogues": {
+    "encounter": "なるほどね。面白い試みだとは思うよ、色々と惜しいけど。",
+    "player_attack": "ああ、そんなところに拘るんだ。レベルが知れるね。",
+    "player_win": "重箱の隅をつつきすぎて、箸が折れてしまった。",
+    "player_lose": "あなたの成果物は、彼の言葉によってガラクタになった。",
+    "player_flee": "まあ、君には期待してないからいいよ。"
+  },
+  "actions": [
+    {
+      "name": "些細なミスの指摘",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は誰も気にしないような誤字を鬼の首を取ったように指摘する！ (ATK×1.0)"
+    },
+    {
+      "name": "本質でない部分への固執",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は全体の出来栄えを無視し、どうでもいい部分を批判し続ける！ (ATK×1.2)"
+    },
+    {
+      "name": "代替案なき批判",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}は「これはダメだ」と言うだけで、どうすれば良いかは絶対に言わない！ (ATK×1.4)"
+    },
+    {
+      "name": "可能性の否定",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}は「どうせ無理」と言い放ち、あなたのやる気を根こそぎ奪う！ (ATK×1.6)"
+    },
+    {
+      "name": "過去の失敗の暴露",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}は今の話と無関係なあなたの過去の失敗を持ち出し、恥をかかせる！ (ATK×1.8)"
+    },
+    {
+      "name": "人格否定",
+      "type": "attack",
+      "damage_multiplier": 2.1,
+      "message": "{enemy_name}は作品への批判と見せかけて、あなたの人間性を否定してくる！ (ATK×2.1)"
+    }
+  ]
+}

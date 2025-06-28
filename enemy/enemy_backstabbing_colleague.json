@@ -1,0 +1,53 @@
+{
+  "name": "影で悪口を言う同僚",
+  "hp": 600,
+  "atk": 750,
+  "def": 120,
+  "image_url": null,
+  "gold_drop": 9500,
+  "dialogues": {
+    "encounter": "噂で聞いたんだけど、大変みたいだね。心配そうな顔で近づいてくる！",
+    "player_attack": "あ、ごめん。ちょっと考え事してた。あなたの話、聞いてなかった。",
+    "player_win": "次のターゲットを見つけ、興味を失ったように去っていった。",
+    "player_lose": "あなたの知らないところで、あなたの評価は地に落ちていた。",
+    "player_flee": "ふーん、まあ頑張って。"
+  },
+  "actions": [
+    {
+      "name": "悪意のないフリ",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「あなたの為を思って言うけど」と前置きし、心を抉る！ (ATK×0.9)"
+    },
+    {
+      "name": "情報の切り貼り",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}はあなたの言葉を都合よく編集し、あらぬ誤解を生む！ (ATK×1.1)"
+    },
+    {
+      "name": "聞こえる声での内緒話",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}はわざと聞こえるようにヒソヒソと話し、疑心暗鬼にさせる！ (ATK×1.3)"
+    },
+    {
+      "name": "過剰な同情",
+      "type": "attack",
+      "damage_multiplier": 1.5,
+      "message": "{enemy_name}は憐れむような視線を向け、あなたを惨めな気持ちにさせる！ (ATK×1.5)"
+    },
+    {
+      "name": "共通の敵を作る",
+      "type": "attack",
+      "damage_multiplier": 1.7,
+      "message": "{enemy_name}は他人の悪口であなたと仲良くなろうとし、人間関係を破壊する！ (ATK×1.7)"
+    },
+    {
+      "name": "最後のひと押し",
+      "type": "attack",
+      "damage_multiplier": 2.0,
+      "message": "{enemy_name}はあなたが弱っている時を狙い、致命的な噂を流す！ (ATK×2.0)"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "過激派ポリコレ警察",
+  "hp": 500,
+  "atk": 850,
+  "def": 120,
+  "image_url": null,
+  "gold_drop": 10500,
+  "dialogues": {
+    "encounter": "今の発言、配慮が足りないんじゃない？正義の執行者が現れた！",
+    "player_attack": "その攻撃は無意識の差別に基づいている！",
+    "player_win": "さらに過激なポリコレ警察に論破され、泣きながら去った。",
+    "player_lose": "過去の言動を全て掘り返され、社会的に抹殺された。",
+    "player_flee": "議論するだけ無駄だ。"
+  },
+  "actions": [
+    {
+      "name": "マイクロアグレッション指摘",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}はあなたの些細な言動を差別と断定する！ (ATK×0.9)"
+    },
+    {
+      "name": "特権の可視化",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は「自分の特権に無自覚だ」と詰め寄り、罪悪感を植え付ける！ (ATK×1.0)"
+    },
+    {
+      "name": "キャンセルカルチャー",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}はSNSであなたを吊し上げ、炎上させようとする！ (ATK×1.4)"
+    },
+    {
+      "name": "究極の正論",
+      "type": "attack",
+      "damage_multiplier": 1.7,
+      "message": "{enemy_name}は誰も反論できない正義を振りかざし、あなたの存在を否定する！ (ATK×1.7)"
+    },
+    {
+      "name": "安全な空間での休息",
+      "type": "heal",
+      "amount": 130,
+      "message": "{enemy_name}は仲間内だけで集まり、傷を舐め合って回復した。 (HP130回復)"
+    },
+    {
+      "name": "再勉強",
+      "type": "heal",
+      "amount": 180,
+      "message": "{enemy_name}は難しい人文書を読み、さらに武装を固めた！ (HP180回復)"
+    }
+  ]
+}

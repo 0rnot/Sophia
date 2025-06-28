@@ -1,0 +1,53 @@
+{
+  "name": "古参アピするファン",
+  "hp": 650,
+  "atk": 720,
+  "def": 130,
+  "image_url": null,
+  "gold_drop": 9800,
+  "dialogues": {
+    "encounter": "にわかは帰れ。古株のファンが新参者を睨みつけている！",
+    "player_attack": "そんなことも知らないでファン名乗ってるの？",
+    "player_win": "公式からの新規ファン歓迎の声明を見て、ショックで倒れた。",
+    "player_lose": "彼の基準を満たせず、ファン失格の烙印を押された。",
+    "player_flee": "愛が足りないやつは去れ。"
+  },
+  "actions": [
+    {
+      "name": "古参マウント",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「俺が応援し始めた頃は…」と過去の話で優位に立とうとする！ (ATK×0.9)"
+    },
+    {
+      "name": "知識テスト",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}はマニアックなクイズを出し、答えられない相手を嘲笑う！ (ATK×1.1)"
+    },
+    {
+      "name": "推しへの解釈違い",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}は自分の考え以外を認めず、異端者として攻撃してくる！ (ATK×1.3)"
+    },
+    {
+      "name": "グッズ所持量チェック",
+      "type": "attack",
+      "damage_multiplier": 1.5,
+      "message": "{enemy_name}は金のかけ方でファン度を測り、相手を貶める！ (ATK×1.5)"
+    },
+    {
+      "name": "『昔は良かった』",
+      "type": "attack",
+      "damage_multiplier": 1.7,
+      "message": "{enemy_name}は過去を美化し、現在のファンをまとめて否定する！ (ATK×1.7)"
+    },
+    {
+      "name": "同担拒否",
+      "type": "attack",
+      "damage_multiplier": 2.0,
+      "message": "{enemy_name}は同じ対象を応援する者を敵とみなし、激しく攻撃する！ (ATK×2.0)"
+    }
+  ]
+}

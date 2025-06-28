@@ -1,0 +1,53 @@
+{
+  "name": "就活に失敗した学生",
+  "hp": 300,
+  "atk": 400,
+  "def": 80,
+  "image_url": null,
+  "gold_drop": 4000,
+  "dialogues": {
+    "encounter": "「お祈りメール」が100通を超えた。社会から不要とされた学生がそこにいる。",
+    "player_attack": "やっぱり、俺なんて…価値ないんだ…。",
+    "player_win": "彼は「ごめんなさい」と呟き、自室にこもってしまった。",
+    "player_lose": "彼の自己否定を聞いているうちに、自分の価値まで分からなくなってしまった。",
+    "player_flee": "いいよ、どうせ俺からはみんな離れていく。"
+  },
+  "actions": [
+    {
+      "name": "ガクチカの否定",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}は「リーダー経験なんてない…」と自分の過去を否定し、その虚しさがあなたを襲う。 (ATK×0.6)"
+    },
+    {
+      "name": "面接のトラウマ",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は圧迫面接の幻覚に怯え、意味不明な発言を繰り返す。 (ATK×0.7)"
+    },
+    {
+      "name": "SNSでの同期比較",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は内定を得た友人の投稿を見て、劣等感からあなたに八つ当たりする。 (ATK×0.8)"
+    },
+    {
+      "name": "リクルートスーツの締め付け",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は窮屈なスーツに苛立ち、自らを傷つけるように暴れる。 (ATK×0.9)"
+    },
+    {
+      "name": "『個性の尊重』という嘘",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は企業が求める個性のなさに絶望し、その矛先をあなたに向ける。 (ATK×1.0)"
+    },
+    {
+      "name": "祈りの言葉",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は「今後のご活躍をお祈り申し上げます」という言葉を吐き出し、その呪詛があなたを蝕む。 (ATK×1.2)"
+    }
+  ]
+}

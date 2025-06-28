@@ -1,0 +1,53 @@
+{
+  "name": "グルメ気取りの評論家",
+  "hp": 500,
+  "atk": 650,
+  "def": 130,
+  "image_url": null,
+  "gold_drop": 11500,
+  "dialogues": {
+    "encounter": "本当に美味しいものを知らないようだね。口うるさそうな客が現れた！",
+    "player_attack": "君の味覚は、まだ『ホンモノ』を知らない。",
+    "player_win": "予約困難な店のキャンセルが出て、慌てて去っていった。",
+    "player_lose": "あなたの行きつけの店を全て酷評され、食欲がなくなった。",
+    "player_flee": "チェーン店は素晴らしい。"
+  },
+  "actions": [
+    {
+      "name": "食材へのダメ出し",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}はあなたの食事の産地や旬を問い詰め、知識で殴ってくる！ (ATK×0.8)"
+    },
+    {
+      "name": "不要な食レポ",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は料理を前に長々と語り始め、料理を冷めさせる！ (ATK×1.0)"
+    },
+    {
+      "name": "マリアージュの押し付け",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は「この料理にはこのワイン」と決めつけ、自由を奪う！ (ATK×1.2)"
+    },
+    {
+      "name": "最終訪問マウント",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}は「俺が最後に行った時の方が美味かった」と言い放ち、全てを台無しにする！ (ATK×1.4)"
+    },
+    {
+      "name": "お口直し",
+      "type": "heal",
+      "amount": 120,
+      "message": "{enemy_name}は高級ミネラルウォーターを飲み、味覚をリセットして回復した。 (HP120回復)"
+    },
+    {
+      "name": "店主との談笑",
+      "type": "heal",
+      "amount": 170,
+      "message": "{enemy_name}は店主と親しげに話し、常連であることをアピールして回復した。 (HP170回復)"
+    }
+  ]
+}

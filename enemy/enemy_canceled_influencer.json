@@ -1,0 +1,53 @@
+{
+  "name": "炎上系インフルエンサー",
+  "hp": 350,
+  "atk": 1000,
+  "def": 10,
+  "image_url": null,
+  "gold_drop": 13000,
+  "dialogues": {
+    "encounter": "俺は何も間違ってない！世間を騒がせた例の人物が現れた！",
+    "player_attack": "アンチの仕業だ！お前も俺を叩きたいのか！",
+    "player_win": "新しい暴露ネタを投下し、満足して去っていった。",
+    "player_lose": "彼の信者に囲まれ、袋叩きにされた。",
+    "player_flee": "関わるとこっちまで炎上しそうだ。"
+  },
+  "actions": [
+    {
+      "name": "涙の謝罪動画",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は反省していない目で謝罪し、同情を誘おうとする！ (ATK×0.8)"
+    },
+    {
+      "name": "ファンネル",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は信者をけしかけ、集団で攻撃させる！ (ATK×1.2)"
+    },
+    {
+      "name": "逆ギレ暴露",
+      "type": "attack",
+      "damage_multiplier": 1.5,
+      "message": "{enemy_name}は他人の秘密を暴露し、論点をすり替えようとする！ (ATK×1.5)"
+    },
+    {
+      "name": "活動再開宣言",
+      "type": "attack",
+      "damage_multiplier": 1.9,
+      "message": "{enemy_name}は反省期間を終えたとし、なりふり構わず攻撃してくる！ (ATK×1.9)"
+    },
+    {
+      "name": "信者からのスパチャ",
+      "type": "heal",
+      "amount": 150,
+      "message": "{enemy_name}は盲目的な応援コメントでHPを回復した！ (HP150回復)"
+    },
+    {
+      "name": "エゴサーチ",
+      "type": "heal",
+      "amount": 200,
+      "message": "{enemy_name}は自分を擁護する意見を見つけ出し、HPを大きく回復した！ (HP200回復)"
+    }
+  ]
+}

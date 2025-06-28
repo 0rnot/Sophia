@@ -1,0 +1,53 @@
+{
+  "name": "空気が読めないフリをする人",
+  "hp": 550,
+  "atk": 820,
+  "def": 100,
+  "image_url": null,
+  "gold_drop": 10500,
+  "dialogues": {
+    "encounter": "え、もしかして今の冗談、通じてない感じ…？",
+    "player_attack": "本気で言ってると思った？ピュアなんだね。",
+    "player_win": "冗談が通じない相手に疲れ、飽きてしまった。",
+    "player_lose": "彼の無神経な一言で、その場の空気が凍り付いた。",
+    "player_flee": "あ、ごめんごめん。地雷だった？"
+  },
+  "actions": [
+    {
+      "name": "無邪気な質問",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は「どうしてそんなに太ってるの？」と悪意なく残酷な質問を投げかける！ (ATK×1.0)"
+    },
+    {
+      "name": "褒め殺し",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は「あなたにしては頑張ったじゃん」と上から目線で褒め、プライドを傷つける！ (ATK×1.2)"
+    },
+    {
+      "name": "事実の暴露",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}は「みんな言ってたよ」と、あなたに関する不都合な真実を暴露する！ (ATK×1.4)"
+    },
+    {
+      "name": "天然記念物",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}はわざとズレた反応をし、あなたのツッコミを無力化する！ (ATK×1.6)"
+    },
+    {
+      "name": "『そういう意図じゃない』",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}は指摘されると意図を否定し、あなたが考えすぎなだけだと責任転嫁する！ (ATK×1.8)"
+    },
+    {
+      "name": "究極のKY",
+      "type": "attack",
+      "damage_multiplier": 2.1,
+      "message": "{enemy_name}はシリアスな雰囲気の中、全く関係のない話をし始め、全てを破壊する！ (ATK×2.1)"
+    }
+  ]
+}

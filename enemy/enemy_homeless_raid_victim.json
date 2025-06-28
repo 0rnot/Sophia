@@ -1,0 +1,53 @@
+{
+  "name": "襲撃されたホームレス",
+  "hp": 690,
+  "atk": 460,
+  "def": 170,
+  "image_url": null,
+  "gold_drop": 6900,
+  "dialogues": {
+    "encounter": "ダンボールハウスの奥で、何かが動いた。それは、若者たちの「遊び」で全てを失った男のなれの果てだった。",
+    "player_attack": "「またか…！もうやめてくれ…！俺はただ、静かに…！」",
+    "player_win": "「寒い…寒いよ…」彼は火を失った絶望の中、ゆっくりと動かなくなった。これで、もう襲われることはない。",
+    "player_lose": "あなたは彼から全てを奪い、満足げに去っていく若者たちの幻影を見た。",
+    "player_flee": "「そうだ、逃げろ！弱い者いじめが、お前らの正義なんだろ！」"
+  },
+  "actions": [
+    {
+      "name": "奪われた毛布",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は寒さに震え、その憎しみが炎となってあなたを焼く。 (ATK×0.9)"
+    },
+    {
+      "name": "嘲笑の記憶",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}はスマホを向けて笑う若者の幻影に苦しめられている。 (ATK×1.0)"
+    },
+    {
+      "name": "空き缶拾い",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は僅かな金を稼ぐための空き缶で、必死にあなたを殴りつける。 (ATK×1.1)"
+    },
+    {
+      "name": "人間への絶望",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}はあなたを含め、全ての人間に敵意を向ける。 (ATK×1.2)"
+    },
+    {
+      "name": "理不尽な暴力",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}の攻撃は、彼が受けた一方的な暴力の再現だ。 (ATK×1.3)"
+    },
+    {
+      "name": "猫の温もり",
+      "type": "heal",
+      "amount": 190,
+      "message": "{enemy_name}は、いつも寄り添ってくれる地域猫を思い出した。彼にはまだ、友がいた。 (HP190回復)"
+    }
+  ]
+}

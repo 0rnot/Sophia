@@ -1,0 +1,53 @@
+{
+  "name": "サイバーカスケードの犠牲者",
+  "hp": 450,
+  "atk": 330,
+  "def": 170,
+  "image_url": null,
+  "gold_drop": 5500,
+  "dialogues": {
+    "encounter": "「俺はそんなつもりじゃ…」たった一度の不用意な発言が、彼の人生を焼き尽くした。",
+    "player_attack": "「まただ…！また、俺を叩きに来たんだろ！」彼は無数の悪意の幻影に怯えている。",
+    "player_win": "「もう、疲れたよ…」彼はスマホの電源を切り、社会的に死亡した。",
+    "player_lose": "あなたもまた、彼の共犯者としてデジタルタトゥーを刻まれた。",
+    "player_flee": "「逃げるのか？正義の味方さんよぉ！」"
+  },
+  "actions": [
+    {
+      "name": "終わらない炎上",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}の体は常に燃えている。ネットの悪意が消えることはない。 (ATK×0.8)"
+    },
+    {
+      "name": "切り取られた言葉",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は自分の発言が捻じ曲げられ、一人歩きする様に絶望する。 (ATK×0.9)"
+    },
+    {
+      "name": "匿名による石打ち",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は顔の見えない大衆から投げつけられた石を、あなたに投げ返す。 (ATK×1.0)"
+    },
+    {
+      "name": "正義の暴走",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は、自分を叩く人々の純粋な正義感にこそ恐怖している。 (ATK×1.2)"
+    },
+    {
+      "name": "デジタルタトゥー",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}の罪は、永遠にインターネットの海を漂い続ける。その呪いはあなたにも及ぶ。 (ATK×1.3)"
+    },
+    {
+      "name": "擁護のコメント",
+      "type": "heal",
+      "amount": 110,
+      "message": "{enemy_name}はたった一つの擁護コメントを見つけ、涙を流した。まだ、世界は終わっていなかった。 (HP110回復)"
+    }
+  ]
+}

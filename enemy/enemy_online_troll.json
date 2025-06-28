@@ -1,0 +1,53 @@
+{
+  "name": "匿名掲示板の荒らし",
+  "hp": 250,
+  "atk": 1000,
+  "def": 0,
+  "image_url": null,
+  "gold_drop": 13000,
+  "dialogues": {
+    "encounter": "効いてる効いてるw 安全な場所から石を投げる者が現れた！",
+    "player_attack": "はい論破。雑魚はROMってろ。",
+    "player_win": "IPアドレスを開示され、おとなしくなった。",
+    "player_lose": "個人情報を特定され、人生が終わった。",
+    "player_flee": "逃げるのか？ダッサw"
+  },
+  "actions": [
+    {
+      "name": "鸚鵡返し",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は相手の発言をそのまま繰り返し、煽ってくる！ (ATK×1.0)"
+    },
+    {
+      "name": "人格攻撃",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は議論と無関係な悪口で集中力を削いでくる！ (ATK×1.2)"
+    },
+    {
+      "name": "藁人形論法",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}は相手の主張を捻じ曲げて解釈し、一方的に勝利宣言をする！ (ATK×1.4)"
+    },
+    {
+      "name": "突然の自分語り",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}は誰も興味のない身の上話を始め、時間を浪費させる！ (ATK×1.6)"
+    },
+    {
+      "name": "IDコロコロ",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}は別人になりすまし、世論を偽装して攻撃してくる！ (ATK×1.8)"
+    },
+    {
+      "name": "必殺・開示請求チラつかせ",
+      "type": "attack",
+      "damage_multiplier": 2.2,
+      "message": "{enemy_name}は法的手段をほのめかし、相手を恐怖に陥れる！ (ATK×2.2)"
+    }
+  ]
+}

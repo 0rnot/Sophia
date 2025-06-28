@@ -1,0 +1,53 @@
+{
+  "name": "遺伝性難病の発症者",
+  "hp": 660,
+  "atk": 440,
+  "def": 230,
+  "image_url": null,
+  "gold_drop": 6300,
+  "dialogues": {
+    "encounter": "「今日も、指が一本、動かなくなった…」男は、ゆっくりと壊れていく自分の体を、ただ見つめている。",
+    "player_attack": "「やめろ…！どうせ、俺はもう長くはないんだ…！」",
+    "player_win": "「ああ…これで、親父と同じか…」彼は、同じ病で死んだ父の幻影を見ながら、静かに倒れた。",
+    "player_lose": "あなたもまた、彼の病を受け継いでしまった。それは、血の呪いだ。",
+    "player_flee": "「どこへ逃げるんだ？この体からは、逃げられないんだぞ！」"
+  },
+  "actions": [
+    {
+      "name": "筋肉の硬直",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は自分の意志に反して動く体で、あなたを傷つける。 (ATK×0.8)"
+    },
+    {
+      "name": "失われる感覚",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は熱さも冷たさも感じない手で、あなたを殴る。 (ATK×0.9)"
+    },
+    {
+      "name": "遺伝への呪い",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は自分にこの運命を与えた先祖を呪い、その憎しみがあなたを襲う。 (ATK×1.1)"
+    },
+    {
+      "name": "未来の否定",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は、結婚も子供も、全てを諦めた。その絶望が、あなたを打ちのめす。 (ATK×1.2)"
+    },
+    {
+      "name": "死の恐怖",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}は、日に日に近づいてくる死の恐怖から、狂ったように暴れだす。 (ATK×1.3)"
+    },
+    {
+      "name": "健やかだった日の記憶",
+      "type": "heal",
+      "amount": 170,
+      "message": "{enemy_name}は、自由に体を動かせた頃の思い出に浸り、一時的に痛みが和らいだ。 (HP170回復)"
+    }
+  ]
+}

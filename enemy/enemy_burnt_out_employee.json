@@ -1,0 +1,53 @@
+{
+  "name": "燃え尽きた会社員",
+  "hp": 450,
+  "atk": 300,
+  "def": 100,
+  "image_url": null,
+  "gold_drop": 3500,
+  "dialogues": {
+    "encounter": "………。虚ろな目をした会社員が、終電後のホームに立っている。",
+    "player_attack": "ああ…もう、どうでもいいや…。",
+    "player_win": "彼はふらりと線路に落ち…いや、最後の力で踏みとどまり、どこかへ歩き去った。",
+    "player_lose": "彼の絶望が伝染し、あなたのHPもなくなった。",
+    "player_flee": "逃げてもいい。俺は、もうどこにも逃げられないから。"
+  },
+  "actions": [
+    {
+      "name": "虚ろな溜息",
+      "type": "attack",
+      "damage_multiplier": 0.5,
+      "message": "{enemy_name}の溜息が空気を重くし、あなたの気力を奪う。 (ATK×0.5)"
+    },
+    {
+      "name": "意味のない謝罪",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}は「すみません…」と呟き、その場の全員の心を暗くする。 (ATK×0.6)"
+    },
+    {
+      "name": "締切日の幻覚",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は存在しないタスクに追われ、虚空に向かってキーボードを叩く。 (ATK×0.7)"
+    },
+    {
+      "name": "栄養ドリンクのがぶ飲み",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}はカフェインで理性を飛ばし、僅かに攻撃的になる。 (ATK×0.8)"
+    },
+    {
+      "name": "未来への絶望",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「このまま40年…？」と呟き、あなたの未来への希望をも奪う。 (ATK×0.9)"
+    },
+    {
+      "name": "無言の残業",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は終わらない仕事の幻影をあなたにも見せ、精神をすり減らす。 (ATK×1.0)"
+    }
+  ]
+}

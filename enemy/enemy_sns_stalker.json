@@ -1,0 +1,53 @@
+{
+  "name": "SNSストーカー",
+  "hp": 400,
+  "atk": 980,
+  "def": 50,
+  "image_url": null,
+  "gold_drop": 12500,
+  "dialogues": {
+    "encounter": "昨日の夜、楽しそうだったね。全部見てたよ。",
+    "player_attack": "鍵垢にしても無駄だよ。全部筒抜けだから。",
+    "player_win": "新しい監視対象を見つけ、興味を失った。",
+    "player_lose": "あなたの過去から未来まで、全てを把握されてしまった。",
+    "player_flee": "ブロックしても、別垢で見るだけだけどね。"
+  },
+  "actions": [
+    {
+      "name": "光速いいね",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}はあなたの投稿に0秒で反応し、常に見ている恐怖を植え付ける！ (ATK×1.0)"
+    },
+    {
+      "name": "過去投稿の掘り起こし",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}はあなたの5年前の恥ずかしいポエムを引用し、精神を攻撃する！ (ATK×1.2)"
+    },
+    {
+      "name": "裏垢の特定",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}はあなたの聖域であるアカウントを見つけ出し、暴露してくる！ (ATK×1.4)"
+    },
+    {
+      "name": "交友関係の監視",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}はあなたが誰と繋がっているかを把握し、人間関係に介入してくる！ (ATK×1.6)"
+    },
+    {
+      "name": "匂わせ投稿",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}はあなたしか分からない情報を投稿し、じわじわと恐怖を与える！ (ATK×1.8)"
+    },
+    {
+      "name": "デジタル魚拓",
+      "type": "attack",
+      "damage_multiplier": 2.2,
+      "message": "{enemy_name}はあなたの全ての発言を保存し、永遠に消えない呪いをかける！ (ATK×2.2)"
+    }
+  ]
+}

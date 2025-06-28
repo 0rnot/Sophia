@@ -1,0 +1,53 @@
+{
+  "name": "非正規雇用の亡霊",
+  "hp": 400,
+  "atk": 280,
+  "def": 110,
+  "image_url": null,
+  "gold_drop": 3500,
+  "dialogues": {
+    "encounter": "来月のシフト、どうなるんだろう…。先の見えない不安が人型を成している。",
+    "player_attack": "正社員様は…いいよな…。",
+    "player_win": "彼は「契約更新はありません」という幻の通告を受け、消えそうになった。",
+    "player_lose": "あなたもまた、いつ切られるか分からない不安に苛まれることになった。",
+    "player_flee": "いいんだ。俺なんて、使い捨てだから。"
+  },
+  "actions": [
+    {
+      "name": "スキルなしの嘆き",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}は「自分には何もない」と呟き、その無力感が伝染する。 (ATK×0.6)"
+    },
+    {
+      "name": "責任のない仕事",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}はやりがいのない単純作業を繰り返し、その虚しさがあなたを襲う。 (ATK×0.7)"
+    },
+    {
+      "name": "交通費の自己負担",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}はすり減った靴であなたを蹴り、その貧しさが心を痛める。 (ATK×0.8)"
+    },
+    {
+      "name": "社員へのコンプレックス",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は楽しげな社員を遠巻きに見て、その嫉妬の炎があなたを焼く。 (ATK×0.9)"
+    },
+    {
+      "name": "雇い止めへの恐怖",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は常に怯えながら働き、その不安が攻撃となって現れる。 (ATK×1.1)"
+    },
+    {
+      "name": "給料日の安堵",
+      "type": "heal",
+      "amount": 70,
+      "message": "{enemy_name}は僅かな給料を握りしめ、「来月も生きられる」とHPを回復した。 (HP70回復)"
+    }
+  ]
+}

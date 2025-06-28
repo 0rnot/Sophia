@@ -1,0 +1,53 @@
+{
+  "name": "末期癌の患者",
+  "hp": 650,
+  "atk": 380,
+  "def": 250,
+  "image_url": null,
+  "gold_drop": 5500,
+  "dialogues": {
+    "encounter": "「ああ…やっと、誰か来てくれたのか…」点滴スタンドに寄りかかり、男は安堵したように微笑んだ。",
+    "player_attack": "「いいんだ…もう、痛いのは…慣れてるから…」彼は痛みよりも、人の温もりに感謝しているようだ。",
+    "player_win": "「ありがとう…これでやっと…眠れる…」彼は満足そうに目を閉じ、二度と動くことはなかった。窓から差し込む光が、彼の穏やかな顔を照らしていた。",
+    "player_lose": "彼の病気の苦しみを追体験し、あなたもまた、終わりなき痛みに苛まれることになった。",
+    "player_flee": "「行かないでくれ…！最期くらい、独りは嫌なんだ…！」"
+  },
+  "actions": [
+    {
+      "name": "血の混じった咳",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は激しく咳き込み、その飛沫があなたの体力を奪う。 (ATK×0.8)"
+    },
+    {
+      "name": "痛みの発作",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は全身を襲う激痛に顔を歪め、苦し紛れにあなたを殴る。 (ATK×0.9)"
+    },
+    {
+      "name": "叶わぬ願い",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は「家に帰りたい」と呟く。その言葉の重みが、あなたを打ちのめす。 (ATK×1.0)"
+    },
+    {
+      "name": "家族への謝罪",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は「すまない」と誰にともなく謝る。その罪悪感が、あなたにも伝染する。 (ATK×1.1)"
+    },
+    {
+      "name": "最後の願い",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は「手を…握ってくれないか」と懇願する。その小さな願いを、あなたは拒否できない。 (ATK×1.2)"
+    },
+    {
+      "name": "モルヒネ投与",
+      "type": "heal",
+      "amount": 150,
+      "message": "{enemy_name}は鎮痛剤によって、ほんの少しだけ安らぎを得た。 (HP150回復)"
+    }
+  ]
+}

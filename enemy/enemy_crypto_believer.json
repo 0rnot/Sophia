@@ -1,0 +1,53 @@
+{
+  "name": "仮想通貨信者",
+  "hp": 550,
+  "atk": 900,
+  "def": 80,
+  "image_url": null,
+  "gold_drop": 12000,
+  "dialogues": {
+    "encounter": "HODL！ガチホ！億り人を目指す者が現れた！",
+    "player_attack": "養分が何か言ってる。狼狽売りはよくないよ？",
+    "player_win": "暴落に巻き込まれ、無事死亡した。",
+    "player_lose": "よく分からない専門用語でまくし立てられ、頭が痛くなった。",
+    "player_flee": "情報弱乙。まあ、先行者利益は俺だけのものだから。"
+  },
+  "actions": [
+    {
+      "name": "草コイン布教",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は将来性不明のコインを熱心に勧めてくる！ (ATK×0.9)"
+    },
+    {
+      "name": "NFTアート自慢",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は高額なサルの絵を見せびらかし、精神的優位に立とうとする！ (ATK×1.0)"
+    },
+    {
+      "name": "専門用語でマウント",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}はブロックチェーンの仕組みを早口で語り、相手を混乱させる！ (ATK×1.2)"
+    },
+    {
+      "name": "暴騰煽り",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}は「今が買い時！」と叫び、市場を過熱させる！ (ATK×1.6)"
+    },
+    {
+      "name": "エアドロップ",
+      "type": "heal",
+      "amount": 100,
+      "message": "{enemy_name}は価値の無いトークンを受け取り、なぜか満足げだ。 (HP100回復)"
+    },
+    {
+      "name": "含み益の確認",
+      "type": "heal",
+      "amount": 200,
+      "message": "{enemy_name}はウォレット残高を見てニヤニヤし、HPが回復した！ (HP200回復)"
+    }
+  ]
+}

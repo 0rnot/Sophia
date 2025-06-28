@@ -1,0 +1,53 @@
+{
+  "name": "詐欺に遭った老人",
+  "hp": 670,
+  "atk": 360,
+  "def": 270,
+  "image_url": null,
+  "gold_drop": 4900,
+  "dialogues": {
+    "encounter": "「息子が…息子が事故に…」彼女は、偽の電話を信じ込み、全財産を失った。",
+    "player_attack": "「やめておくれ！この金は、あの子の命なんだ！」彼女はあなたを、金の回収に来た悪人だと思い込んでいる。",
+    "player_win": "「ああ…これで、あの子は…」彼女は全てを失ったことを悟り、その場で泣き崩れた。",
+    "player_lose": "あなたは彼女の絶望に巻き込まれ、全財産を失った。",
+    "player_flee": "「待っておくれ！この通りだ！あの子を助けてやっておくれ！」"
+  },
+  "actions": [
+    {
+      "name": "振り込め用紙",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は偽の請求書を振りかざし、あなたに支払いを要求する。 (ATK×0.8)"
+    },
+    {
+      "name": "息子の幻聴",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「母さん、助けて」という息子の幻の声を聴き、パニックに陥る。 (ATK×0.9)"
+    },
+    {
+      "name": "老後の蓄え",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は、長年かけて貯めた金を、必死に守ろうとする。 (ATK×1.0)"
+    },
+    {
+      "name": "信じる心への攻撃",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}の純粋な善意が、今は凶器となってあなたを傷つける。 (ATK×1.1)"
+    },
+    {
+      "name": "騙された怒り",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は、自分を騙した見えない犯人への怒りを、あなたにぶつける。 (ATK×1.2)"
+    },
+    {
+      "name": "孫からの電話",
+      "type": "heal",
+      "amount": 180,
+      "message": "{enemy_name}は本物の孫からの電話を受け、まだ自分には守るべきものがあると気付いた。 (HP180回復)"
+    }
+  ]
+}

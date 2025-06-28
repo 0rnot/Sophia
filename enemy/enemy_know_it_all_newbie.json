@@ -1,0 +1,53 @@
+{
+  "name": "わかった気になってる新人",
+  "hp": 400,
+  "atk": 950,
+  "def": 50,
+  "image_url": null,
+  "gold_drop": 11000,
+  "dialogues": {
+    "encounter": "前の会社ではこうでしたけど？妙に自信満々な新人が現れた！",
+    "player_attack": "そのやり方、非効率すぎません？",
+    "player_win": "大きなミスをしてしまい、ついに現実を知った。",
+    "player_lose": "彼の謎理論に付き合わされ、一日が無駄になった。",
+    "player_flee": "はいはい、すごいすごい。"
+  },
+  "actions": [
+    {
+      "name": "謎の業界用語",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は誰も知らない横文字を使い、相手を煙に巻く！ (ATK×0.9)"
+    },
+    {
+      "name": "根拠なきダメ出し",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は既存のルールを「意味がない」と一蹴する！ (ATK×1.0)"
+    },
+    {
+      "name": "前職の成功体験",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は過去の栄光を語り、マウントを取ってくる！ (ATK×1.2)"
+    },
+    {
+      "name": "『僕ならこうしますね』",
+      "type": "attack",
+      "damage_multiplier": 1.5,
+      "message": "{enemy_name}は頼んでもいないのにアドバイスを始め、ペースを乱す！ (ATK×1.5)"
+    },
+    {
+      "name": "無能な働き者",
+      "type": "attack",
+      "damage_multiplier": 1.7,
+      "message": "{enemy_name}は勝手な判断で行動し、状況を悪化させる！ (ATK×1.7)"
+    },
+    {
+      "name": "質問への逆質問",
+      "type": "attack",
+      "damage_multiplier": 2.0,
+      "message": "{enemy_name}は「逆にどう思います？」と返し、一切の責任を放棄する！ (ATK×2.0)"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "塩対応サポートセンター",
+  "hp": 800,
+  "atk": 450,
+  "def": 200,
+  "image_url": null,
+  "gold_drop": 9000,
+  "dialogues": {
+    "encounter": "お問い合わせありがとうございます。AIオペレーターが対応します。",
+    "player_attack": "恐れ入りますが、もう一度お伺いしてもよろしいでしょうか？",
+    "player_win": "担当部署にお繋ぎします。しばらくお待ち下さい…プープープー…",
+    "player_lose": "問題は解決しましたか？のアンケートに「いいえ」と答える気力もなくなった。",
+    "player_flee": "この会話は録音されています。"
+  },
+  "actions": [
+    {
+      "name": "テンプレート回答",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}はあなたの質問と無関係な回答を繰り返し、あなたの正気を奪う！ (ATK×0.6)"
+    },
+    {
+      "name": "長時間の保留",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は軽快な音楽を流し続け、あなたの貴重な時間を奪う！ (ATK×0.8)"
+    },
+    {
+      "name": "担当部署へのたらい回し",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は何度も同じ説明をさせ、あなたのHPを削る！ (ATK×1.0)"
+    },
+    {
+      "name": "『再起動してください』",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は問題解決の最終手段を繰り出し、全ての会話をリセットする！ (ATK×1.2)"
+    },
+    {
+      "name": "システムの自動回復",
+      "type": "heal",
+      "amount": 100,
+      "message": "{enemy_name}は原因不明のまま、HPが回復した。 (HP100回復)"
+    },
+    {
+      "name": "『参考になりました』",
+      "type": "heal",
+      "amount": 150,
+      "message": "{enemy_name}はユーザーからの感謝の言葉（幻聴）を聞いてHPが回復した。 (HP150回復)"
+    }
+  ]
+}

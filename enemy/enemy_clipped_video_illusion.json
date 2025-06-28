@@ -1,0 +1,53 @@
+{
+  "name": "切り抜き動画の虚像",
+  "hp": 260,
+  "atk": 340,
+  "def": 80,
+  "image_url": null,
+  "gold_drop": 2800,
+  "dialogues": {
+    "encounter": "で、結論は？15秒で理解できない話は、価値がない。タイパを求める虚像がいる。",
+    "player_attack": "長い。三行でまとめて。",
+    "player_win": "彼は次の面白い動画を求め、スワイプの果てに消えた。",
+    "player_lose": "あなたは彼の断片的な知識に振り回され、思考がショートした。",
+    "player_flee": "時間の無駄だったわ。"
+  },
+  "actions": [
+    {
+      "name": "知ったかぶり",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は聞きかじった知識を、さも真実かのように語る。 (ATK×0.7)"
+    },
+    {
+      "name": "文脈の無視",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は物事の一部分だけを見て、全てを理解した気になっている。 (ATK×0.8)"
+    },
+    {
+      "name": "極論での攻撃",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「AかBか」の二元論で、複雑な問題を単純化する。 (ATK×0.9)"
+    },
+    {
+      "name": "集中力の欠如",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}はすぐに他のことに興味が移り、話が全く通じない。 (ATK×1.0)"
+    },
+    {
+      "name": "『それってあなたの感想ですよね？』",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は論破系インフルエンサーの言葉を借りて、あなたを攻撃する。 (ATK×1.2)"
+    },
+    {
+      "name": "面白い部分の反芻",
+      "type": "heal",
+      "amount": 40,
+      "message": "{enemy_name}は何度も同じミームを見て笑い、空虚な心を一時的に満たした。 (HP40回復)"
+    }
+  ]
+}

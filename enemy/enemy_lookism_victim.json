@@ -1,0 +1,53 @@
+{
+  "name": "ルッキズムの被害者",
+  "hp": 290,
+  "atk": 310,
+  "def": 90,
+  "image_url": null,
+  "gold_drop": 3100,
+  "dialogues": {
+    "encounter": "鏡に映る自分が、醜い。美の基準に呪われた者が、俯いている。",
+    "player_attack": "どうせ私なんて、誰も見てくれない。",
+    "player_win": "彼女はマスクで顔を隠し、人ごみの中に消えていった。",
+    "player_lose": "あなたもまた、自分の顔の些細な欠点が気になって仕方がなくなった。",
+    "player_flee": "見ないで。そんな目で、私を見ないで。"
+  },
+  "actions": [
+    {
+      "name": "ため息混じりの自己評価",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は自分の容姿を卑下し、その負のオーラがあなたの自信を奪う。 (ATK×0.7)"
+    },
+    {
+      "name": "他人との比較地獄",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}はSNSのインフルエンサーと自分を比べ、その劣等感をあなたにぶつける。 (ATK×0.8)"
+    },
+    {
+      "name": "美容整形の妄想",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「ここをこうすれば…」と自分の顔をいじり、その狂気があなたを襲う。 (ATK×0.9)"
+    },
+    {
+      "name": "心ない言葉の反芻",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は過去に言われた悪口を思い出し、その痛みをあなたに追体験させる。 (ATK×1.0)"
+    },
+    {
+      "name": "容姿への呪い",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は「この顔じゃなければ」と叫び、その呪いがあなたにも降りかかる。 (ATK×1.2)"
+    },
+    {
+      "name": "奇跡の一枚",
+      "type": "heal",
+      "amount": 50,
+      "message": "{enemy_name}は偶然撮れた美しい自撮りを見て、僅かな間だけ自分を愛することができた。 (HP50回復)"
+    }
+  ]
+}

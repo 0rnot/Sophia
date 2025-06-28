@@ -1,0 +1,53 @@
+{
+  "name": "甘やかされた世間知らず",
+  "hp": 450,
+  "atk": 920,
+  "def": 80,
+  "image_url": null,
+  "gold_drop": 12500,
+  "dialogues": {
+    "encounter": "パパに言いつけてやる！金銭感覚の狂った人間が現れた！",
+    "player_attack": "なんで私がこんなことしなきゃいけないの？",
+    "player_win": "カードを止められ、無力化した。",
+    "player_lose": "彼の親の権力によって、理不尽な要求を飲まされた。",
+    "player_flee": "平民はすっこんでなさい。"
+  },
+  "actions": [
+    {
+      "name": "常識の欠如",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は当たり前のことを知らず、会話が成立しない！ (ATK×1.0)"
+    },
+    {
+      "name": "金銭での解決",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は札束であなたの頬を叩き、尊厳を傷つける！ (ATK×1.2)"
+    },
+    {
+      "name": "他力本願",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}は困難に陥るとすぐに他人を呼び、面倒事を増やす！ (ATK×1.4)"
+    },
+    {
+      "name": "感謝の欠如",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}は親切を当然の権利だと思い、あなたの心をすり減らす！ (ATK×1.6)"
+    },
+    {
+      "name": "被害者意識",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}は少しでも思い通りにならないと、世界に裏切られたかのように騒ぎ立てる！ (ATK×1.8)"
+    },
+    {
+      "name": "『身分をわきまえなさい』",
+      "type": "attack",
+      "damage_multiplier": 2.1,
+      "message": "{enemy_name}は見下した目であなたを攻撃し、存在価値を否定する！ (ATK×2.1)"
+    }
+  ]
+}

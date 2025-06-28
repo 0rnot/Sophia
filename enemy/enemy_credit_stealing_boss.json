@@ -1,0 +1,53 @@
+{
+  "name": "手柄を横取りする上司",
+  "hp": 750,
+  "atk": 780,
+  "def": 160,
+  "image_url": null,
+  "gold_drop": 12800,
+  "dialogues": {
+    "encounter": "この前の件、上手くいったのは『我々』のチームワークのおかげだ。",
+    "player_attack": "君の意見も参考にはなったよ。まあ、採用しなかったけどね。",
+    "player_win": "より大きな手柄を横取りされ、社長に詰められていた。",
+    "player_lose": "あなたの成果は全て上司のものとなり、評価だけが下がった。",
+    "player_flee": "報告はちゃんとしてくれよ。俺が困るから。"
+  },
+  "actions": [
+    {
+      "name": "主語の肥大化",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}はあなたの成果を「我々の」と言い換え、功績を希釈する！ (ATK×0.9)"
+    },
+    {
+      "name": "責任の矮小化",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は自分のミスを「君の」と言い換え、責任を全て押し付ける！ (ATK×1.1)"
+    },
+    {
+      "name": "アイデアの横領",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}はあなたのアイデアを、さも自分が考えたかのように役員にプレゼンする！ (ATK×1.4)"
+    },
+    {
+      "name": "無能な働き者",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}は余計な口出しでプロジェクトを混乱させ、あなたの仕事を増やす！ (ATK×1.6)"
+    },
+    {
+      "name": "評価という名の暴力",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}は人事評価を盾に、理不尽な要求を突きつけてくる！ (ATK×1.8)"
+    },
+    {
+      "name": "『君のためを思って』",
+      "type": "attack",
+      "damage_multiplier": 2.1,
+      "message": "{enemy_name}はあなたから手柄を奪うことを「成長の機会」だと言い放つ！ (ATK×2.1)"
+    }
+  ]
+}

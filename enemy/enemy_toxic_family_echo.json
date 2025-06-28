@@ -1,0 +1,53 @@
+{
+  "name": "毒親育ちの残響",
+  "hp": 360,
+  "atk": 290,
+  "def": 120,
+  "image_url": null,
+  "gold_drop": 3600,
+  "dialogues": {
+    "encounter": "親の声が、頭に響く。「お前はダメな子だ」と。その呪いが人型を成している。",
+    "player_attack": "ごめんなさい、私が全部悪いんです。",
+    "player_win": "彼は「愛されたかっただけなのに」と呟き、膝から崩れ落ちた。",
+    "player_lose": "彼の親の幻影が、今度はあなたを支配し始めた。",
+    "player_flee": "俺は、親の操り人形だから。"
+  },
+  "actions": [
+    {
+      "name": "過剰な自己否定",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}は常に自分を責め、その姿を見ているだけで胸が痛む。 (ATK×0.6)"
+    },
+    {
+      "name": "顔色を伺う",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}はあなたの機嫌を損ねないかと、常にビクビクしている。 (ATK×0.7)"
+    },
+    {
+      "name": "愛情の試し行為",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}はわざとあなたを困らせ、見捨てないか試してくる。 (ATK×0.8)"
+    },
+    {
+      "name": "親の言葉の再生",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は親から言われた暴言を、そのままあなたに投げつけてくる！ (ATK×1.0)"
+    },
+    {
+      "name": "突然の癇癪",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は抑圧された感情を爆発させ、見境なく暴れだす。 (ATK×1.2)"
+    },
+    {
+      "name": "束の間の肯定",
+      "type": "heal",
+      "amount": 60,
+      "message": "{enemy_name}は他人の些細な優しさに触れ、ほんの少しだけHPが回復した。 (HP60回復)"
+    }
+  ]
+}

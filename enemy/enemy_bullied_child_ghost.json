@@ -1,0 +1,53 @@
+{
+  "name": "いじめられっ子の復讐霊",
+  "hp": 460,
+  "atk": 490,
+  "def": 110,
+  "image_url": null,
+  "gold_drop": 3800,
+  "dialogues": {
+    "encounter": "「…なんで、僕だけ…？」雨の日の教室に、誰もいないはずなのに、声がする。",
+    "player_attack": "「痛いよ…やめてよ…！みんなと同じこと、しないでよ…！」",
+    "player_win": "「…そっか。君も、同じなんだね」彼は満足そうに笑い、スッと消えた。床には、濡れた上履きだけが残っていた。",
+    "player_lose": "あなたの耳元で「これで君も、共犯だね」と囁く声が聞こえた。",
+    "player_flee": "「逃げるんだ。みんなそうだった。僕を置いて、みんな逃げたんだ。」"
+  },
+  "actions": [
+    {
+      "name": "教科書への落書き",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}はあなたの大切なものを汚し、あの日の屈辱を再現する。 (ATK×0.7)"
+    },
+    {
+      "name": "聞こえないフリ",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}はあなたの言葉を無視する。その孤独は、かつて彼が味わったものだ。 (ATK×0.8)"
+    },
+    {
+      "name": "悪意の伝染",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は周りの人間を操り、あなたを孤立させる。 (ATK×1.0)"
+    },
+    {
+      "name": "『死ね』という言葉",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}が投げかける言葉は、かつて彼自身が投げかけられた刃だ。 (ATK×1.2)"
+    },
+    {
+      "name": "孤立の呪い",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}の存在そのものが、あなたを世界から切り離していく。 (ATK×1.4)"
+    },
+    {
+      "name": "優しい先生の幻",
+      "type": "heal",
+      "amount": 110,
+      "message": "{enemy_name}は「大丈夫だよ」と言ってくれた幻の教師を思い出し、少しだけ痛みが和らいだ。 (HP110回復)"
+    }
+  ]
+}

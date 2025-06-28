@@ -1,0 +1,9 @@
+discord.py
+google-generativeai
+yt-dlp
+spotipy
+aiohttp
+aiosqlite
+beautifulsoup4
+youtube-transcript-api
+requests

@@ -1,0 +1,53 @@
+{
+  "name": "ネット依存の少年",
+  "hp": 380,
+  "atk": 410,
+  "def": 70,
+  "image_url": null,
+  "gold_drop": 3800,
+  "dialogues": {
+    "encounter": "リアルなんてクソゲー。薄暗い部屋で、モニターの光だけが彼を照らしている。",
+    "player_attack": "うるさいな…今、大事な場面なんだから…。",
+    "player_win": "サーバーがメンテナンスに入り、彼は世界の終わりを迎えた。",
+    "player_lose": "あなたは彼のおすすめソシャゲにハマり、重課金兵となった。",
+    "player_flee": "あっちの世界の方が、よっぽどマシだよ。"
+  },
+  "actions": [
+    {
+      "name": "現実からの逃避",
+      "type": "attack",
+      "damage_multiplier": 0.6,
+      "message": "{enemy_name}はヘッドホンで耳を塞ぎ、あなたの言葉を遮断する。 (ATK×0.6)"
+    },
+    {
+      "name": "匿名の強がり",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}はネットで覚えた言葉であなたを威嚇するが、その声は震えている。 (ATK×0.7)"
+    },
+    {
+      "name": "ガチャ爆死",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は目当てのキャラが出ず、その怒りをあなたにぶつけてくる！ (ATK×0.8)"
+    },
+    {
+      "name": "承認欲求",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「いいね」の数を気にし、その不安が攻撃性を増大させる。 (ATK×0.9)"
+    },
+    {
+      "name": "昼夜逆転",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は不健康な生活で思考が鈍り、見境なく攻撃してくる。 (ATK×1.0)"
+    },
+    {
+      "name": "『居場所』",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は唯一の居場所であるネットの世界を守るため、必死に抵抗する。 (ATK×1.2)"
+    }
+  ]
+}

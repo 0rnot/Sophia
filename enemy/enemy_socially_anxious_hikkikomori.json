@@ -1,0 +1,53 @@
+{
+  "name": "対人恐怖のひきこもり",
+  "hp": 350,
+  "atk": 250,
+  "def": 150,
+  "image_url": null,
+  "gold_drop": 2500,
+  "dialogues": {
+    "encounter": "部屋の隅で、何者かが小さく震えている。世界の全てを拒絶しているようだ。",
+    "player_attack": "ごめんなさい…ごめんなさい…！",
+    "player_win": "彼はモニターの裏に隠れ、完全に沈黙した。",
+    "player_lose": "彼の恐怖と不安が乗り移り、あなたも部屋から出られなくなった。",
+    "player_flee": "…！"
+  },
+  "actions": [
+    {
+      "name": "視線を逸らす",
+      "type": "attack",
+      "damage_multiplier": 0.4,
+      "message": "{enemy_name}はあなたから目を逸らし、その拒絶があなたの心をわずかに傷つける。 (ATK×0.4)"
+    },
+    {
+      "name": "小声での呟き",
+      "type": "attack",
+      "damage_multiplier": 0.5,
+      "message": "{enemy_name}は何かを呟いているが、聞き取れない。その不気味さが不安を煽る。 (ATK×0.5)"
+    },
+    {
+      "name": "パニック発作",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は突然叫び声をあげ、無差別に物を投げつけてくる！ (ATK×0.7)"
+    },
+    {
+      "name": "ネットスラングでの威嚇",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は唯一の武器であるネット知識で、かろうじて反撃を試みる。 (ATK×0.8)"
+    },
+    {
+      "name": "自己防衛",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は腕で頭を覆い、かたく縮こまる。その姿は痛々しい。 (ATK×0.9)"
+    },
+    {
+      "name": "ドアを閉ざす",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}はあなたとの間に壁を作り、心を閉ざす。その断絶は深くあなたを傷つける。 (ATK×1.0)"
+    }
+  ]
+}

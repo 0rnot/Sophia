@@ -1,0 +1,53 @@
+{
+  "name": "元少年兵",
+  "hp": 550,
+  "atk": 500,
+  "def": 150,
+  "image_url": null,
+  "gold_drop": 6500,
+  "dialogues": {
+    "encounter": "その目は、子供のそれではない。幾多の戦場を渡り、感情を殺すことだけを教え込まれた。",
+    "player_attack": "男は無感情に、ただ淡々と、あなたの攻撃を捌き、反撃する。殺しは、彼の日常だからだ。",
+    "player_win": "「…これで、終わりか」彼は初めて、年相応の子供のような、安らかな顔を見せた。",
+    "player_lose": "あなたは殺される。そこに、何の感情もない。それが、彼の世界の常識だからだ。",
+    "player_flee": "「命令は…絶対だ」彼は、あなたが逃げることを許さない。"
+  },
+  "actions": [
+    {
+      "name": "無機質な射撃",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}はためらいなく引き金を引く。その弾丸には、重みがない。 (ATK×0.9)"
+    },
+    {
+      "name": "戦闘のフラッシュバック",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は敵と味方の区別がつかなくなり、無差別に攻撃を始める。 (ATK×1.0)"
+    },
+    {
+      "name": "失われた人間性",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は感情を殺すことで生き延びてきた。その空虚さが、あなたを絶望させる。 (ATK×1.1)"
+    },
+    {
+      "name": "薬物による強化",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は恐怖を忘れるために与えられた薬物で、理性を失っている。 (ATK×1.2)"
+    },
+    {
+      "name": "故郷の歌",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}は、忘れてしまったはずの故郷の歌を口ずさむ。その歌声は、ひどく悲しい。 (ATK×1.3)"
+    },
+    {
+      "name": "家族の記憶",
+      "type": "heal",
+      "amount": 130,
+      "message": "{enemy_name}は、両親の顔をぼんやりと思い出した。それが、彼の最後の人間性だった。 (HP130回復)"
+    }
+  ]
+}

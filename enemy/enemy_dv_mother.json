@@ -1,0 +1,53 @@
+{
+  "name": "機能不全家族の母親",
+  "hp": 480,
+  "atk": 350,
+  "def": 140,
+  "image_url": null,
+  "gold_drop": 2800,
+  "dialogues": {
+    "encounter": "「大丈夫、何でもないのよ」笑顔で隠した頬の痣が、痛々しい。",
+    "player_attack": "「やめて！あの子が見てるでしょ！」彼女はあなたではなく、背後の何かを恐れている。",
+    "player_win": "「ごめんね…ごめんね…」彼女は誰にともなく謝り続け、その場にうずくまった。",
+    "player_lose": "あなたは彼女の夫の幻影に殴られ、家族の一員にされてしまった。",
+    "player_flee": "「行かないで…！あなたまでいなくなったら、私は…！」"
+  },
+  "actions": [
+    {
+      "name": "取り繕った笑顔",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}の無理した笑顔が、あなたの心を締め付ける。 (ATK×0.8)"
+    },
+    {
+      "name": "壊れた食器",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は割れた皿の破片を投げる。それは、昨夜の惨劇の残り香だ。 (ATK×0.9)"
+    },
+    {
+      "name": "共依存の鎖",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は「あの人は本当は優しい」と呟き、その鎖であなたを縛ろうとする。 (ATK×1.0)"
+    },
+    {
+      "name": "子供のための嘘",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}は子供を守るため、あなたを敵として攻撃する。その目には涙が浮かんでいる。 (ATK×1.2)"
+    },
+    {
+      "name": "『愛してる』という暴力",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}の攻撃は、歪んでしまった愛情そのものだ。 (ATK×1.3)"
+    },
+    {
+      "name": "子供の寝顔",
+      "type": "heal",
+      "amount": 110,
+      "message": "{enemy_name}は子供の安らかな寝顔を見て、明日も『母親』を続ける力を得た。 (HP110回復)"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "孤独死した男の地縛霊",
+  "hp": 400,
+  "atk": 330,
+  "def": 120,
+  "image_url": null,
+  "gold_drop": 4600,
+  "dialogues": {
+    "encounter": "「誰か…いませんか…」コンビニ弁当のゴミが散らばる部屋で、声がする。誰にも看取られなかった男の最後の言葉だ。",
+    "player_attack": "「ああ、やっと…誰か来てくれたんですね…」彼は嬉しそうに、涙を流した。",
+    "player_win": "「ありがとう…これで、やっと…」彼は満足そうに微笑み、部屋の埃と共に消えていった。あなたは、彼を弔う唯一の人間となった。",
+    "player_lose": "あなたもこの部屋の住人となり、次の訪問者を永遠に待ち続けることになった。",
+    "player_flee": "「行かないで…！また独りになるのは、もう嫌だ…！」"
+  },
+  "actions": [
+    {
+      "name": "鳴らない電話",
+      "type": "attack",
+      "damage_multiplier": 0.8,
+      "message": "{enemy_name}は虚空の受話器を取り、誰とも繋がらない会話を始める。その孤独があなたを襲う。 (ATK×0.8)"
+    },
+    {
+      "name": "カレンダーの染み",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は自分の命日を指し示す。その日から、彼の時間は止まったままだ。 (ATK×0.9)"
+    },
+    {
+      "name": "テレビのノイズ",
+      "type": "attack",
+      "damage_multiplier": 1.0,
+      "message": "{enemy_name}は砂嵐のテレビを唯一の友とし、その無機質な音があなたを不安にさせる。 (ATK×1.0)"
+    },
+    {
+      "name": "忘れられた存在",
+      "type": "attack",
+      "damage_multiplier": 1.2,
+      "message": "{enemy_name}の攻撃は、誰にも気づかれなかった彼の人生そのものだ。重く、そして悲しい。 (ATK×1.2)"
+    },
+    {
+      "name": "最後の願い",
+      "type": "attack",
+      "damage_multiplier": 1.3,
+      "message": "{enemy_name}は「話を聞いてほしい」と懇願する。それが彼の唯一の望みだった。 (ATK×1.3)"
+    },
+    {
+      "name": "楽しかった日の写真",
+      "type": "heal",
+      "amount": 110,
+      "message": "{enemy_name}は色褪せた写真を見つめる。友人たちと笑い合った、遠い日の記憶だ。 (HP110回復)"
+    }
+  ]
+}

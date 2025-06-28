@@ -1,0 +1,53 @@
+{
+  "name": "グループワークの癌",
+  "hp": 800,
+  "atk": 500,
+  "def": 200,
+  "image_url": null,
+  "gold_drop": 7000,
+  "dialogues": {
+    "encounter": "ごめん、見てなかった。会議中にスマホをいじる学生が現れた！",
+    "player_attack": "やる気ある？こっちだって忙しいんだけど。",
+    "player_win": "発表前日に姿を消した。",
+    "player_lose": "彼の担当分を全て肩代わりさせられ、徹夜する羽目になった。",
+    "player_flee": "もうあいつはメンバーから外そう。"
+  },
+  "actions": [
+    {
+      "name": "既読スルー",
+      "type": "attack",
+      "damage_multiplier": 0.7,
+      "message": "{enemy_name}は連絡を無視し、計画の進行を遅延させる！ (ATK×0.7)"
+    },
+    {
+      "name": "謎の自信",
+      "type": "attack",
+      "damage_multiplier": 0.9,
+      "message": "{enemy_name}は「俺なら一日で終わる」と豪語し、何もしない！ (ATK×0.9)"
+    },
+    {
+      "name": "批判だけは一人前",
+      "type": "attack",
+      "damage_multiplier": 1.1,
+      "message": "{enemy_name}は他人の成果にケチをつけ、士気を下げる！ (ATK×1.1)"
+    },
+    {
+      "name": "直前のドタキャン",
+      "type": "attack",
+      "damage_multiplier": 1.4,
+      "message": "{enemy_name}は「急用ができた」と言い、全ての責任を放棄する！ (ATK×1.4)"
+    },
+    {
+      "name": "成果物の横取り",
+      "type": "attack",
+      "damage_multiplier": 1.6,
+      "message": "{enemy_name}は他人の働きを自分の手柄のように発表する！ (ATK×1.6)"
+    },
+    {
+      "name": "『みんなのおかげです』",
+      "type": "attack",
+      "damage_multiplier": 1.8,
+      "message": "{enemy_name}は感謝の言葉を述べ、自分も頑張ったかのように見せかける！ (ATK×1.8)"
+    }
+  ]
+}
