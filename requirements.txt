@@ -1,4 +1,5 @@
 discord.py
+PyNaCl
 google-generativeai
 yt-dlp
 spotipy
