@@ -114,6 +114,7 @@ class SophiaBot(commands.Bot):
             await self.load_extension('RPG_cog')
             await self.load_extension('sophia_home_cog')
             await self.load_extension('sophia_monitor_cog')
+            await self.load_extension('sophia_proactive_cog')
         except commands.ExtensionAlreadyLoaded as e:
             logger.warning(f"Cog {e.name} は既にロードされています。")
         except Exception as e:
