@@ -932,12 +932,16 @@ class AudioCog(commands.Cog, name="AudioCog"):
             {"title": f"{bot_name}のヘルプ♪ - RPGの仕様 (3/5)",
              "description": rpg_spec_description
             },
-            {"title": f"{bot_name}のヘルプ♪ - 環境確認コマンド (4/5)", "description": (
-                "お部屋の今の状態が気になる？そんな時はこのコマンド！\n"
+            {"title": f"{bot_name}のヘルプ♪ - 情報収集コマンド (4/5)", "description": (
+                "お部屋の環境や、新しい情報をチェックするコマンドだよ！\n"
                 "```\n"
-                "/hv all       - 温度、湿度、CO2濃度など全部まとめて表示！\n"
+                "/hv meter     - 温度、湿度、CO2濃度などをまとめて表示！\n"
+                "/hv plug      - プラグの電力使用状況を表示！\n"
+                "/q list       - 監視中のソース一覧を表示！\n"
+                "/q add        - 新しいソースを監視リストに追加！\n"
+                "/q remove     - 監視リストからソースを削除！\n"
                 "```\n"
-                "自動監視もしてるから、お部屋の環境が悪くなったら私が教えてあげるね！"
+                "お部屋の環境が悪くなったり、新しい情報が来たら私が教えてあげるね！"
             )},
             {"title": f"{bot_name}のヘルプ♪ - 他のコマンドとか色々！ (5/5)", "description": (
                 f"{bot_name}とのおしゃべりとか、他のことも教えちゃうね！\n\n"

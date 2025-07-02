@@ -22,37 +22,29 @@ class ProactiveCog(commands.Cog):
         logger.info("自発会話Cogのタスクがキャンセルされました。")
 
     def _schedule_daily_posts(self):
-        """朝と夜に1回ずつ、ランダムな時刻に投稿をスケジュールする"""
+        """1日に1回、ランダムな時刻に投稿をスケジュールする"""
         now = datetime.now()
         today = now.date()
         
-        # 時間帯を定義
-        morning_start = datetime.combine(today, time(7, 0))
-        morning_end = datetime.combine(today, time(12, 0))
-        night_start = datetime.combine(today, time(20, 0))
-        night_end = datetime.combine(today, time(23, 59))
+        # 時間帯を定義 (昼から夜にかけて)
+        daytime_start = datetime.combine(today, time(12, 0))
+        daytime_end = datetime.combine(today, time(20, 0))
 
         new_schedule = []
 
-        # 朝のスケジュール
-        # 現在時刻が朝の時間帯より前の場合のみスケジュール
-        if now < morning_end:
-            start = max(now, morning_start)
-            if start < morning_end:
-                morning_time = start + timedelta(seconds=random.uniform(0, (morning_end - start).total_seconds()))
-                new_schedule.append(morning_time.time())
-
-        # 夜のスケジュール
-        # 現在時刻が夜の時間帯より前の場合のみスケジュール
-        if now < night_end:
-            start = max(now, night_start)
-            if start < night_end:
-                night_time = start + timedelta(seconds=random.uniform(0, (night_end - start).total_seconds()))
-                new_schedule.append(night_time.time())
+        # スケジュール
+        if now < daytime_end:
+            start = max(now, daytime_start)
+            if start < daytime_end:
+                random_time = start + timedelta(seconds=random.uniform(0, (daytime_end - start).total_seconds()))
+                new_schedule.append(random_time.time())
         
         self.daily_post_times = sorted(new_schedule)
         self.last_checked_day = now.day
-        logger.info(f"本日の自発会話の時刻をスケジュールしました: {[t.strftime('%H:%M:%S') for t in self.daily_post_times]}")
+        if new_schedule:
+            logger.info(f"本日の自発会話の時刻をスケジュールしました: {new_schedule[0].strftime('%H:%M:%S')}")
+        else:
+            logger.info("本日の自発会話のスケジュールは��りません。")
 
     async def _find_most_active_channel(self, guild: discord.Guild) -> Optional[discord.TextChannel]:
         """サーバーで最もアクティブなテキストチャンネルを見つける"""

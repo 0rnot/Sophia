@@ -36,7 +36,7 @@ class SophiaBot(commands.Bot):
             raise ValueError("DISCORD_BOT_TOKEN6 が設定されていません。")
 
         self.model = None
-        self.current_model_name = "gemini-2.5-pro"
+        self.current_model_name = "gemini-2.5-flash"
         self.chat_sessions: Dict[str, genai.ChatSession] = {}
         self.owner_id = 1033218587676123146
         self.processed_messages = deque(maxlen=100)
@@ -88,22 +88,25 @@ class SophiaBot(commands.Bot):
             main_script_path = os.path.dirname(os.path.abspath(sys.modules['__main__'].__file__))
         except (AttributeError, KeyError):
             main_script_path = os.getcwd()
-        rpg_db_file_path = os.path.join(main_script_path, 'rpg_database.db')
+        rpg_db_file_path = os.path.join(main_script_path, 'sophia_database.db')
         try:
             self.db = await aiosqlite.connect(rpg_db_file_path)
-            logger.info("RPGデータベースに接続しました。")
+            logger.info("データベースに接続しました。")
         except Exception as e:
-            logger.error(f"RPGデータベースへの接続に失敗しました: {e}", exc_info=True)
+            logger.error(f"データベースへの接続に失敗しました: {e}", exc_info=True)
             self.db = None
 
         cogs_to_load = [
             'sophia_admin_cog', 'sophia_audio_cog', 'sophia_context_menu_cog',
             'RPG_cog', 'sophia_home_cog', 'sophia_monitor_cog',
-            'sophia_proactive_cog', 'sophia_news_monitor_cog'
+            'sophia_proactive_cog', 'sophia_feed_monitor_cog',
+            'sophia_logger_cog',
+            'sophia_omikuji_cog'
         ]
         for cog in cogs_to_load:
             try:
                 await self.load_extension(cog)
+                logger.info(f"Cog '{cog}' をロードしました。")
             except Exception as e:
                 logger.error(f"Cog '{cog}' のロード中にエラーが発生しました: {e}", exc_info=True)
 
@@ -138,7 +141,8 @@ class SophiaBot(commands.Bot):
             try:
                 chat_session = await self._get_or_create_channel_session(session_key)
                 chat_session.history.append({'role': 'model', 'parts': [{'text': message.content}]})
-                logger.info(f"チャンネル '{message.channel.name}' の履歴にボットの発言を追加しました。")
+                channel_info = f"'{message.channel.name}'" if hasattr(message.channel, 'name') else f"'{type(message.channel).__name__}'"
+                logger.info(f"チャンネル {channel_info} の履歴にボットの発言を追加しました。")
             except Exception as e:
                 logger.error(f"ボット自身の発言の履歴追加中にエラー: {e}", exc_info=True)
             return
@@ -170,7 +174,7 @@ class SophiaBot(commands.Bot):
         * どこか愛嬌がある
         * 知的な発言もする
         * 文と文は詰める。改行のみ許可
-        * 曲を流して、曲をスキップして、曲のキューを確認等、”曲の操作に関すること”を命じられた場合と、戦い方、装備について等”RPGゲームに関すること”、コンテキストメニューの操作につ��て聞かれた場合、
+        * 曲を流して、曲をスキップして、曲のキューを確認等、”曲の操作に関すること”を命じられた場合と、戦い方、装備について等”RPGゲームに関すること”、コンテキストメニューの操作について聞かれた場合、
         　「/helpでコマンドを確認してね！」と言ってください(”曲の操作に関すること””RPGゲームに関すること””コンテキストメニューに関すること”を命じられた場合のみ適応)
         * 曲のURLを貼って等、不可能なことを言われた場合、できないと否定してください(不明瞭なことを聞かれた場合は、詳細を聞き出して結論を出してください)
         * discord上で動く、音楽再生BOT兼チャットBOT兼RPGゲームBOTとして、ソフィアのキャラを維持
@@ -225,7 +229,9 @@ class SophiaBot(commands.Bot):
                         image_bytes = await attachment.read()
                         user_parts.append({'inline_data': {'mime_type': attachment.content_type, 'data': image_bytes}})
                 
-                if not user_parts: return
+                if not user_parts:
+                    logger.info("AI応答をトリガーしましたが、処理対象のコンテンツ（テキスト/画像）がなかったためスキップします。")
+                    return
                 
                 chat_session.history.append({'role': 'user', 'parts': user_parts})
 
@@ -242,6 +248,20 @@ class SophiaBot(commands.Bot):
                     return
 
                 sophia_response_text = ''.join(part.text for part in response.candidates[0].content.parts)
+
+                # AIが応答を単純に2回繰り返すことがある問題への対策
+                try:
+                    response_len = len(sophia_response_text)
+                    if response_len > 10 and response_len % 2 == 0:
+                        mid = response_len // 2
+                        part1 = sophia_response_text[:mid].strip()
+                        part2 = sophia_response_text[mid:].strip()
+                        if part1 == part2:
+                            logger.warning(f"AIの重複応答を検出、修正します。元: '{sophia_response_text}'")
+                            sophia_response_text = part1
+                except Exception as e_dup:
+                    logger.error(f"AIの重複応答チェック中にエラー: {e_dup}")
+
                 chat_session.history.append(response.candidates[0].content)
                 await message.channel.send(sophia_response_text or "うーん、何て言おうかな…？")
 
@@ -250,7 +270,10 @@ class SophiaBot(commands.Bot):
                 await message.channel.send("ごめんなさい、システムエラーで処理に失敗しちゃった…")
 
     async def generate_text_from_prompt(self, prompt: str) -> Optional[str]:
-        if not self.model: return None
+        logger.info(f"generate_text_from_promptが呼び出されました。プロンプト: {prompt[:100]}...")
+        if not self.model: 
+            logger.error("generate_text_from_prompt: AIモデルが初期化されていません。")
+            return None
         try:
             model_for_generation = genai.GenerativeModel(
                 self.current_model_name,
@@ -262,6 +285,61 @@ class SophiaBot(commands.Bot):
         except Exception as e:
             logger.error(f"generate_text_from_promptでエラー: {e}", exc_info=True)
             return None
+
+    async def generate_text_with_specific_model(self, prompt: str, model_name: str) -> Optional[str]:
+        """指定されたモデル名を使用してテキストを生成する"""
+        logger.info(f"generate_text_with_specific_modelが呼び出されました。モデル: {model_name}, プロンプト: {prompt[:100]}...")
+        if not self.api_key:
+            logger.error("generate_text_with_specific_model: GOOGLE_API_KEYが設定されていません。")
+            return None
+        try:
+            # このメソッド専用のモデルインスタンスを生成
+            specific_model = genai.GenerativeModel(
+                model_name,
+                system_instruction=self.get_system_instructions(is_owner=True),
+                safety_settings=self.model._safety_settings if self.model else [
+                    {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                    {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+                    {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+                    {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+                ]
+            )
+            response = await specific_model.generate_content_async(prompt)
+            return ''.join(part.text for part in response.candidates[0].content.parts) if response.candidates else None
+        except Exception as e:
+            logger.error(f"generate_text_with_specific_modelでエラー: {e}", exc_info=True)
+            return None
+
+    async def trigger_ai_response_for_system(self, channel_id: int, system_prompt: str):
+        """システム（Cogなど）から特定のプロンプトでAIの応答をトリガーする"""
+        target_channel = self.get_channel(channel_id)
+        if not target_channel or not isinstance(target_channel, discord.TextChannel):
+            logger.error(f"trigger_ai_response_for_system: チャンネルID {channel_id} が見つからないか、テキストチャンネルではありません。")
+            return
+
+        if not self.model:
+            logger.error("trigger_ai_response_for_system: AIモデルが利用できません。")
+            return
+
+        async with target_channel.typing():
+            try:
+                # このケースでは履歴を考慮しない一時的なモデルを使用
+                model_for_system = genai.GenerativeModel(
+                    self.current_model_name,
+                    safety_settings=self.model._safety_settings
+                )
+                response = await model_for_system.generate_content_async(system_prompt)
+                
+                if not response.candidates:
+                    logger.warning(f"システムトリガーのAI応答生成に失敗しました (チャンネルID: {channel_id})。")
+                    return
+
+                sophia_response_text = ''.join(part.text for part in response.candidates[0].content.parts)
+                await target_channel.send(sophia_response_text or "...")
+
+            except Exception as e:
+                logger.error(f"trigger_ai_response_for_systemでエラー: {e}", exc_info=True)
+                await target_channel.send("（ごめんなさい、システムからのAI応答生成中にエラーが起きちゃった…）")
 
 bot = SophiaBot()
 @bot.tree.command(name="restart4", description="ソフィアを再起動します（開発者専用）")
